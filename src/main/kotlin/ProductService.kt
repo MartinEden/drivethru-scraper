@@ -11,7 +11,7 @@ class ProductService(private val fetcher: CachingFetcher) {
         "partial" to "false"
     )
 
-    private fun getProducts(ranking: Ranking, page: Int, ruleSystem: RuleSystemReference): ProductResponse {
+    private fun getProducts(ranking: Ranking, page: Int, ruleSystem: RuleSystem): ProductResponse {
         val extraParameters = mapOf(
             "page" to page,
             "ranking" to ranking.name.lowercase(),
@@ -23,7 +23,7 @@ class ProductService(private val fetcher: CachingFetcher) {
         return fetcher.fetch(url)
     }
 
-    fun fetch(ranking: Ranking, ruleSystem: RuleSystemReference): Sequence<RPGItem> {
+    fun fetch(ranking: Ranking, ruleSystem: RuleSystem): Sequence<RPGItem> {
         return sequence {
             var shouldContinue = true
             var page = 1
