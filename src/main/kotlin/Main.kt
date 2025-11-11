@@ -1,28 +1,53 @@
 package eden.drivethru
 
+import gg.jte.ContentType
+import gg.jte.TemplateEngine
+import gg.jte.output.StringOutput
+import gg.jte.resolve.ResourceCodeResolver
 import io.ktor.client.*
 import java.nio.file.Paths
 
 const val THROTTLE_DELAY = 10 * 1000L
 const val CACHE_DIRECTORY = "/home/martin/.drivethru/cache"
+const val TEMPLATE_RESOURCE_PATH = "templates"
 
-fun main() {
-    val fetcher = CachingFetcher(Paths.get(CACHE_DIRECTORY), HttpClient())
-    val service = ProductService(fetcher)
+class BestsellersTask(private val service: ProductService, private val templateEngine: TemplateEngine) {
+    fun run(ranks: Iterable<Ranking>, systems: Iterable<RuleSystemReference>) {
+        val groupedProducts = ranks.associateWith { getProductsForRanking(it, systems) }
 
-    val relevantRanks = listOf(Ranking.Adamantine, Ranking.Mithral, Ranking.Platinum)
-    val groupedProducts = relevantRanks.associateWith { getAllProductsForRanking(it, service) }
+        printToStdout(groupedProducts)
 
-    for ((ranking, products) in groupedProducts) {
-        println("# $ranking")
-        for (product in products) {
-            println(product)
+        val output = StringOutput()
+        templateEngine.render("template.kte", groupedProducts, output)
+        println(output)
+    }
+
+    private fun getProductsForRanking(ranking: Ranking, systems: Iterable<RuleSystemReference>): Sequence<RPGItem> =
+        sequence {
+            for (ruleSystem in systems) {
+                yieldAll(service.fetch(ranking, ruleSystem))
+            }
+        }
+
+    private fun printToStdout(groupedProducts: Map<Ranking, Sequence<RPGItem>>) {
+        for ((ranking, products) in groupedProducts) {
+            println("# $ranking")
+            for (product in products) {
+                println(product)
+            }
         }
     }
 }
 
-fun getAllProductsForRanking(ranking: Ranking, service: ProductService): Sequence<RPGItem> = sequence {
-    for (ruleSystem in RuleSystemReference.all) {
-        yieldAll(service.fetch(ranking, ruleSystem))
-    }
+fun main() {
+    val fetcher = CachingFetcher(Paths.get(CACHE_DIRECTORY), HttpClient())
+    val service = ProductService(fetcher)
+    val resolver = ResourceCodeResolver(TEMPLATE_RESOURCE_PATH)
+    val templateEngine = TemplateEngine.create(resolver, ContentType.Html)
+    val task = BestsellersTask(service, templateEngine)
+
+    task.run(
+        ranks = listOf(Ranking.Platinum, Ranking.Mithral, Ranking.Adamantine),
+        systems = RuleSystemReference.all
+    )
 }

@@ -22,9 +22,11 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
-    implementation("io.ktor:ktor-client-core:${ktor_version}")
-    implementation("io.ktor:ktor-client-cio:${ktor_version}")
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("io.ktor:ktor-client-cio:$ktor_version")
     implementation("org.slf4j:slf4j-simple:2.0.16")
+    implementation("gg.jte:jte:3.2.1")
+    implementation("gg.jte:jte-kotlin:3.2.1")
 }
 
 tasks.test {
