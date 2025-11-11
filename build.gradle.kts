@@ -25,8 +25,6 @@ dependencies {
     implementation("io.ktor:ktor-client-core:$ktor_version")
     implementation("io.ktor:ktor-client-cio:$ktor_version")
     implementation("org.slf4j:slf4j-simple:2.0.16")
-    implementation("gg.jte:jte:3.2.1")
-    implementation("gg.jte:jte-kotlin:3.2.1")
 }
 
 tasks.test {

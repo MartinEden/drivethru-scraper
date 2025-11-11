@@ -1,5 +1,8 @@
 package eden.drivethru
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class RPGItem(
     val id: Int,
     val name: String,
@@ -19,3 +22,6 @@ data class RPGItem(
         }
     }
 }
+
+fun Map<Ranking, Sequence<RPGItem>>.reify() =
+    this.entries.associate { (ranking, collection) -> ranking to collection.toList() }

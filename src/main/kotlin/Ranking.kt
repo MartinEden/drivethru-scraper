@@ -1,5 +1,8 @@
 package eden.drivethru
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 enum class Ranking {
     None,
     Copper,
