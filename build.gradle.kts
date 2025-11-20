@@ -33,3 +33,14 @@ tasks.test {
 kotlin {
     jvmToolchain(21)
 }
+
+val removeOutput by tasks.registering(Delete::class) {
+    delete(layout.projectDirectory.dir("output"))
+}
+tasks.findByName("clean")!!.dependsOn(removeOutput)
+
+val copyResourcesToOutput by tasks.registering(Copy::class) {
+    from(layout.projectDirectory.dir("src/main/resources"))
+    into(layout.projectDirectory.dir("output"))
+}
+tasks.findByName("run")!!.dependsOn(copyResourcesToOutput)

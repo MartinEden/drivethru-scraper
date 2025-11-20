@@ -17,28 +17,11 @@ fun main() {
     val fetcher = CachingFetcher(Paths.get(CACHE_DIRECTORY), HttpClient())
     val service = ProductService(fetcher)
 
-    val outputPath = setupOutputAndGetTargetPath()
+    val outputPath = Path.of(OUTPUT_DIRECTORY).resolve("bestsellers.js")
     val task = BestsellersTask(service, outputPath)
 
     task.run(
         ranks = listOf(Ranking.Platinum, Ranking.Mithral, Ranking.Adamantine),
         systems = RuleSystem.all
     )
-}
-
-private fun getPathToResource(name: String): Path {
-    val resource = BestsellersTask::class.java.getResource(name)
-    return resource?.path?.let { Path.of(it) }
-        ?: throw Exception("Unable to find resource '$name'")
-}
-
-@OptIn(ExperimentalPathApi::class)
-private fun setupOutputAndGetTargetPath(): Path {
-    val outputDirectory = Path.of(OUTPUT_DIRECTORY)
-    outputDirectory.deleteRecursively()
-    outputDirectory.createDirectories()
-    val htmlPath = getPathToResource("/index.html")
-    Files.copy(htmlPath, outputDirectory.resolve("index.html"))
-
-    return outputDirectory.resolve("bestsellers.js")
 }
