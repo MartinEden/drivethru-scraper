@@ -23,14 +23,14 @@ class ProductService(private val fetcher: CachingFetcher) {
         return fetcher.fetch(url)
     }
 
-    fun fetch(ranking: Ranking, ruleSystem: RuleSystem): Sequence<RPGItem> {
+    fun fetch(ranking: Ranking, ruleSystem: RuleSystem): Sequence<RPGProduct> {
         return sequence {
             var shouldContinue = true
             var page = 1
             while (shouldContinue) {
                 val response = getProducts(ranking, page, ruleSystem)
                 shouldContinue = response.meta.totalItems > response.meta.itemsPerPage * page
-                val products = response.data.map { RPGItem.fromJsonData(it) }
+                val products = response.data.map { RPGProduct.fromJsonData(it) }
                 if (products.any()) {
                     yieldAll(products)
                     page += 1

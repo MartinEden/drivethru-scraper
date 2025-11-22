@@ -16,12 +16,13 @@ const val OUTPUT_DIRECTORY = "output"
 fun main() {
     val fetcher = CachingFetcher(Paths.get(CACHE_DIRECTORY), HttpClient())
     val service = ProductService(fetcher)
+    val imageService = ImageService(fetcher)
 
     val outputPath = Path.of(OUTPUT_DIRECTORY).resolve("bestsellers.js")
-    val task = BestsellersTask(service, outputPath)
+    val task = BestsellersTask(service, imageService, outputPath)
 
     task.run(
-        ranks = listOf(Ranking.Platinum, Ranking.Mithral, Ranking.Adamantine),
+        ranks = listOf(Ranking.Adamantine, Ranking.Mithral, Ranking.Platinum),
         systems = RuleSystem.all
     )
 }

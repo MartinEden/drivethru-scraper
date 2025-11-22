@@ -2,9 +2,34 @@
 <html lang="en">
     <head>
         <title>Bestselling OSR modules on DriveThruRPG</title>
+        <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="bestsellers.js"></script>
+        <script type="importmap">
+            {
+              "imports": {
+                "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+              }
+            }
+        </script>
     </head>
-    <body>
-        <h1>Hello</h1>
+    <body id="app">
+        <div v-for="group in groups" class="product-group">
+            <div class="rank">{{ group.rank }}</div>
+            <div class="products">
+                <div v-for="product in group.products" class="product">
+                    {{ product.name }}
+                </div>
+            </div>
+        </div>
     </body>
+
+    <script type="module">
+        import { createApp } from 'vue';
+
+        createApp({
+          data() {
+            return { groups: data };
+          }
+        }).mount('#app')
+    </script>
 </html>

@@ -1,0 +1,18 @@
+.product-group {
+    margin: 30px;
+}
+.rank {
+    font-weight: bold;
+    font-size: 14pt;
+    margin-bottom: 10px;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+.products .product {
+    width: 180px;
+    height: 270px;
+    margin: 10px;
+    border: 1px solid black;
+}

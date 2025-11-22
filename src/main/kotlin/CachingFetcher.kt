@@ -9,6 +9,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 import kotlin.io.path.exists
 import kotlin.io.path.readText
+import kotlin.io.path.writeBytes
 import kotlin.io.path.writeText
 
 data class CachingFetcher(val cacheDirectory: Path, val client: HttpClient) {
@@ -24,7 +25,7 @@ data class CachingFetcher(val cacheDirectory: Path, val client: HttpClient) {
         return if (path.exists()) {
             Json.Default.decodeFromString(path.readText())
         } else {
-            println("Fetching $url")
+            println("Fetching data from $url")
             Thread.sleep(THROTTLE_DELAY)
             val rawData = runBlocking {
                 client.get(url).bodyAsText()
@@ -32,6 +33,19 @@ data class CachingFetcher(val cacheDirectory: Path, val client: HttpClient) {
             path.writeText(rawData)
             Json.Default.decodeFromString(rawData)
         }
+    }
+
+    fun fetchFile(url: String, reason: String? = null): Path {
+        val filename = makeSafeFilename(url)
+        val path = cacheDirectory.resolve(filename)
+        if (!path.exists()) {
+            println("Fetching file from $url " + (if (reason != null) "for $reason" else ""))
+            Thread.sleep(THROTTLE_DELAY)
+            path.writeBytes(runBlocking {
+                client.get(url).bodyAsBytes()
+            })
+        }
+        return path
     }
 
 }

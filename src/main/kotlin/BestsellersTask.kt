@@ -4,30 +4,34 @@ import kotlinx.serialization.json.Json
 import java.nio.file.Path
 import kotlin.io.path.writeText
 
-class BestsellersTask(private val service: ProductService, private val outputPath: Path) {
+class BestsellersTask(
+    private val service: ProductService,
+    private val imageService: ImageService,
+    private val outputPath: Path
+) {
     private val encoder = Json { prettyPrint = true }
 
     fun run(ranks: Iterable<Ranking>, systems: Iterable<RuleSystem>) {
-        val groupedProducts = ranks.associateWith { getProductsForRanking(it, systems) }
+        val groupedProducts = ranks.map {
+            RankedProductGroup(it, getProductsForRanking(it, systems).toList())
+        }
+        outputToJson(groupedProducts)
+        imageService.downloadImages(groupedProducts)
+    }
 
-        printToStdout(groupedProducts)
-        val json = encoder.encodeToString(groupedProducts.reify())
+    private fun outputToJson(groups: List<RankedProductGroup>) {
+        val json = encoder.encodeToString(groups)
         outputPath.writeText("const data = $json")
     }
 
-    private fun getProductsForRanking(ranking: Ranking, systems: Iterable<RuleSystem>): Sequence<RPGItem> =
+    private fun getProductsForRanking(ranking: Ranking, systems: Iterable<RuleSystem>): Sequence<RPGProduct> =
         sequence {
-            for (ruleSystem in systems) {
-                yieldAll(service.fetch(ranking, ruleSystem))
-            }
-        }
-
-    private fun printToStdout(groupedProducts: Map<Ranking, Sequence<RPGItem>>) {
-        for ((ranking, products) in groupedProducts) {
             println("# $ranking")
-            for (product in products) {
-                println(product)
+            for (ruleSystem in systems) {
+                for (product in service.fetch(ranking, ruleSystem)) {
+                    println(product)
+                    yield(product)
+                }
             }
         }
-    }
 }
