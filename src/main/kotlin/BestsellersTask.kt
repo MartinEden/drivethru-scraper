@@ -13,7 +13,7 @@ class BestsellersTask(
 
     fun run(ranks: Iterable<Ranking>, systems: Iterable<RuleSystem>) {
         val groupedProducts = ranks.map {
-            RankedProductGroup(it, getProductsForRanking(it, systems).toList())
+            RankedProductGroup(it, getProductsForRanking(it, systems).toSet().toList())
         }
         outputToJson(groupedProducts)
         imageService.downloadImages(groupedProducts)
