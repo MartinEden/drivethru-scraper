@@ -14,11 +14,12 @@ const val CACHE_DIRECTORY = "/home/martin/.drivethru/cache"
 const val OUTPUT_DIRECTORY = "output"
 
 fun main() {
+    val outputDirectory = Path.of(OUTPUT_DIRECTORY)
     val fetcher = CachingFetcher(Paths.get(CACHE_DIRECTORY), HttpClient())
     val service = ProductService(fetcher)
-    val imageService = ImageService(fetcher)
+    val imageService = ImageService(fetcher, outputDirectory)
 
-    val outputPath = Path.of(OUTPUT_DIRECTORY).resolve("bestsellers.js")
+    val outputPath = outputDirectory.resolve("bestsellers.js")
     val task = BestsellersTask(service, imageService, outputPath)
 
     task.run(
