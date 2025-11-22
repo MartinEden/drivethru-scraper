@@ -17,7 +17,12 @@
             <div class="rank">{{ group.rank }}</div>
             <div class="products">
                 <div v-for="product in group.products" class="product">
-                    {{ product.name }}
+                    <div class="thumbnail">
+                        <img :src="toImageUrl(product)" />
+                    </div>
+                    <div class="title">
+                        {{ product.name }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -29,6 +34,11 @@
         createApp({
           data() {
             return { groups: data };
+          },
+          methods: {
+            toImageUrl(product) {
+              return "images/" + product.id;
+            }
           }
         }).mount('#app')
     </script>
