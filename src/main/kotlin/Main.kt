@@ -1,13 +1,10 @@
 package eden.drivethru
 
+import eden.drivethru.models.Ranking
+import eden.drivethru.models.RuleSystem
 import io.ktor.client.*
-import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
-import kotlin.io.path.ExperimentalPathApi
-import kotlin.io.path.createDirectories
-import kotlin.io.path.deleteIfExists
-import kotlin.io.path.deleteRecursively
 
 const val THROTTLE_DELAY = 10 * 1000L
 const val CACHE_DIRECTORY = "/home/martin/.drivethru/cache"

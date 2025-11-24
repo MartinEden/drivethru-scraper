@@ -1,4 +1,4 @@
-package eden.drivethru
+package eden.drivethru.models
 
 import kotlinx.serialization.Serializable
 

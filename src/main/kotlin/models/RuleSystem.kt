@@ -1,4 +1,4 @@
-package eden.drivethru
+package eden.drivethru.models
 
 data class RuleSystem(val id: String, val name: String) {
     companion object {

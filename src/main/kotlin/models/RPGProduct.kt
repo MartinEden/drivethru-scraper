@@ -1,5 +1,6 @@
-package eden.drivethru
+package eden.drivethru.models
 
+import eden.drivethru.Product
 import kotlinx.serialization.Serializable
 
 @Serializable

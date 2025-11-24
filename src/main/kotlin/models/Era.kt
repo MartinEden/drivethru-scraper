@@ -1,4 +1,4 @@
-package eden.drivethru
+package eden.drivethru.models
 
 const val WIZARDS_OF_THE_COAST = 44
 

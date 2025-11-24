@@ -1,5 +1,7 @@
 package eden.drivethru
 
+import eden.drivethru.models.RPGProduct
+import eden.drivethru.models.RankedProductGroup
 import java.nio.file.Path
 import kotlin.io.path.copyTo
 
