@@ -1,45 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Bestselling OSR modules on DriveThruRPG</title>
-        <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="bestsellers.js"></script>
-        <script type="importmap">
-            {
-              "imports": {
-                "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-              }
-            }
-        </script>
-    </head>
-    <body id="app">
-        <div v-for="group in groups" class="product-group">
-            <div class="rank">{{ group.rank }}</div>
-            <div class="products">
-                <div v-for="product in group.products" class="product">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bestselling OSR modules on DriveThruRPG</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="bestsellers.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+          }
+        }
+    </script>
+</head>
+<body>
+<div id="app">
+    <div class="controls">
+        <label>
+            <input type="checkbox" v-model="eras" value="OSR"/> OSR
+        </label>
+        <label>
+            <input type="checkbox" v-model="eras" value="Classic"/> Classic TSR
+        </label>
+    </div>
+
+    <div v-for="group in filteredGroups" class="product-group">
+        <div class="rank">{{ group.rank }}</div>
+        <div class="products">
+            <div v-for="product in group.products" class="product">
+                <a :href="toProductUrl(product)">
                     <div class="thumbnail">
-                        <img :src="toImageUrl(product)" />
+                        <img :src="toImageUrl(product)"/>
                     </div>
                     <div class="title">
                         {{ product.name }}
                     </div>
-                </div>
+                </a>
             </div>
         </div>
-    </body>
+    </div>
+</div>
+<script type="module">
+    import { createApp } from 'vue';
 
-    <script type="module">
-        import { createApp } from 'vue';
-
-        createApp({
-          data() {
-            return { groups: data };
-          },
-          methods: {
-            toImageUrl(product) {
-              return "images/" + product.id;
-            }
-          }
-        }).mount('#app')
-    </script>
+    createApp({
+      data() {
+        return {
+            groups: data,
+            eras: ["OSR", "Classic"]
+        };
+      },
+      computed: {
+        filteredGroups() {
+          const eras = this.eras;
+          return this.groups.map(g => ({
+            rank: g.rank,
+            products: g.products.filter(p => eras.includes(p.era)),
+          }));
+        }
+      },
+      methods: {
+        toImageUrl(product) {
+          return "images/" + product.id;
+        },
+        toProductUrl(product) {
+          return "https://www.drivethrurpg.com/en/product/" + product.id;
+        }
+      }
+    }).mount('#app')
+</script>
+</body>
 </html>

@@ -47,7 +47,8 @@ data class ProductAttributes(
     val description: ProductDescription,
     val ranking: RankingInfo? = null,
     val storefrontPrimaryFilterValues: List<FilterValue>,
-    val thumbnail200: String? = null
+    val thumbnail200: String? = null,
+    val publisherId: Int
 )
 
 @Serializable

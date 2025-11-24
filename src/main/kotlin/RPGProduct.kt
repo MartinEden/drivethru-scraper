@@ -8,7 +8,8 @@ data class RPGProduct(
     val name: String,
     val ranking: Ranking,
     val imageUrl: String?,
-    val ruleSystems: List<String>
+    val ruleSystems: List<String>,
+    val era: Era,
 ) {
     companion object {
         fun fromJsonData(product: Product): RPGProduct {
@@ -19,7 +20,8 @@ data class RPGProduct(
                 imageUrl = product.attributes.thumbnail200,
                 ruleSystems = product.attributes.storefrontPrimaryFilterValues.map { fv ->
                     fv.descriptions.firstOrNull { it.languageCode == "en" }?.name ?: "Unknown"
-                }
+                },
+                era = Era.fromPublisherId(product.attributes.publisherId)
             )
         }
     }
