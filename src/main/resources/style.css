@@ -1,10 +1,29 @@
+@font-face {
+  font-family: "Normal";
+  src: url("Alegreya.ttf");
+}
+
+body {
+    font-family: Normal;
+    background: url("images/bg.png");
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    color: rgb(110, 50, 110);
+}
+
 .product-group {
     margin: 30px;
 }
 .rank {
     font-weight: bold;
-    font-size: 14pt;
+    font-size: 24pt;
     margin-bottom: 10px;
+    padding-left: 10px;
 }
 .products {
     display: flex;
@@ -12,17 +31,39 @@
 }
 .products .product {
     width: 200px;
-    height: 300px;
+    height: 315px;
     margin: 20px 10px;
     text-align: center;
 }
 
 .products .product .thumbnail {
     width: 100%;
-    height: 250px;
+    height: 260px;
     overflow: hidden;
+    background: black;
+    box-shadow: 5px 5px 3px rgb(127,127,127);
+}
+
+.products .product .thumbnail img {
+    width: 100%;
 }
 
 .products .product .title {
-    padding: 5px;
+    padding: 10px 5px;
+}
+
+@media (width <= 500px) {
+    body {
+        margin: 0;
+    }
+    .product-group {
+        margin: 30px 10px;
+    }
+    .products .product {
+        width: 150px;
+        height: 230px;
+    }
+    .products .product .thumbnail {
+        height: 180px;
+    }
 }
