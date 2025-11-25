@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Bestselling OSR modules on DriveThruRPG</title>
     <link rel="stylesheet" href="style.css">
@@ -16,16 +17,40 @@
 <body>
 <div id="app">
     <div class="controls">
-        <label>
-            <input type="checkbox" v-model="eras" value="OSR"/> OSR
-        </label>
-        <label>
-            <input type="checkbox" v-model="eras" value="Classic"/> Classic TSR
-        </label>
+        <fieldset>
+            <input id="eras-osr" type="checkbox" v-model="eras" value="OSR"/>
+            <label for="eras-osr">OSR</label>
+            <input id="eras-classic" type="checkbox" v-model="eras" value="Classic"/>
+            <label for="eras-classic"> Classic TSR</label>
+        </fieldset>
+        <fieldset>
+            <div class="tags">
+                <div v-for="state in tagStates"
+                     class="tag-section"
+                     @dragover.prevent
+                     @dragenter.prevent
+                     @drop="onDrop($event, state)">
+                    <div class="tag-header">
+                        {{ state.name }}
+                    </div>
+                    <div class="tag-list">
+                        <span v-for="system in ruleSystemsWithState(state)"
+                              draggable="true"
+                              @dragstart="startDrag($event, system)"
+                              class="tag">
+                            {{ system.name }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
     </div>
+
+    <div>{{ totalProducts }} products (with current filters)</div>
 
     <div v-for="group in filteredGroups" class="product-group">
         <div class="rank">{{ group.rank }}</div>
+        <div>{{ totalForRank(group.rank) }} products (with current filters)</div>
         <div class="products">
             <div v-for="product in group.products" class="product">
                 <a :href="toProductUrl(product)">

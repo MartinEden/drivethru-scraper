@@ -6,6 +6,7 @@
 body {
     font-family: Normal;
     background: url("images/bg.png");
+    padding: 10px;
 }
 
 a {
@@ -17,13 +18,12 @@ a:visited {
 }
 
 .product-group {
-    margin: 30px;
+    margin: 30px 0;
 }
 .rank {
     font-weight: bold;
     font-size: 24pt;
     margin-bottom: 10px;
-    padding-left: 10px;
 }
 .products {
     display: flex;
@@ -67,3 +67,65 @@ a:visited {
         height: 180px;
     }
 }
+
+.controls {
+}
+
+fieldset {
+    margin: 20px 0;
+    background: #5593ba;
+    color: white;
+    border: 2px solid white;
+}
+
+.tags {
+    display: flex;
+}
+
+.tag-section + .tag-section {
+    border-left: solid 1px white;
+}
+.tag-header {
+    white-space: nowrap;
+    text-align: center;
+    font-weight: bold;
+    margin: 5px;
+}
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tag {
+    position: relative;
+    margin: 5px;
+    padding: 5px 15px;
+    background: white;
+    color: black;
+    cursor: move;
+}
+.tag:hover {
+    z-index: +1;
+    box-shadow: 5px 5px 5px black;
+}
+/*
+.tag .move {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: -8px;
+    bottom: 0px;
+    width: 20px;
+    font-size: 24pt;
+    color: black;
+    -webkit-text-stroke: 2px white;
+}
+.tag .move.left {
+    left: -14px;
+}
+.tag .move.right {
+    right: -8px;
+}
+.tag:focus .move {
+    display: block;
+}
+*/
