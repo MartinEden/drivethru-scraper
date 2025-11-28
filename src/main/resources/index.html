@@ -24,24 +24,18 @@
             <label for="eras-classic"> Classic TSR</label>
         </fieldset>
         <fieldset>
+            <div class="note">
+            Click once for an "include" filter, click again for "exclude",
+            and click one more time to remove the filter.
+            </div>
             <div class="tags">
-                <div v-for="state in tagStates"
-                     class="tag-section"
-                     @dragover.prevent
-                     @dragenter.prevent
-                     @drop="onDrop($event, state)">
-                    <div class="tag-header">
-                        {{ state.name }}
-                    </div>
-                    <div class="tag-list">
-                        <span v-for="system in ruleSystemsWithState(state)"
-                              draggable="true"
-                              @dragstart="startDrag($event, system)"
-                              class="tag">
-                            {{ system.name }}
-                        </span>
-                    </div>
-                </div>
+                <span v-for="system in ruleSystems" class="tag" @click="toggleRuleSystemState(system)">
+                    <span v-if="system.state == -1" class="tag-negative">✗</span>
+                    <span v-if="system.state == +1" class="tag-positive">✓</span>
+                    <span class="tag-name">
+                        {{ system.name }}
+                    </span>
+                </span>
             </div>
         </fieldset>
     </div>

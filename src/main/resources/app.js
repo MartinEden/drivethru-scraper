@@ -40,9 +40,6 @@ export const App = {
                 || (system.state == 1 && product.ruleSystems.includes(system.name))
                 || (system.state == -1 && !product.ruleSystems.includes(system.name))
         },
-        ruleSystemsWithState(state) {
-            return this.ruleSystems.filter(s => s.state == state.value);
-        },
         totalForRank(rank) {
             console.log(rank);
             console.log(this.filteredGroups);
@@ -50,15 +47,11 @@ export const App = {
                 .find(g => g.rank == rank)
                 .products.length;
         },
-        startDrag(evt, system) {
-            evt.dataTransfer.dropEffect = 'move'
-            evt.dataTransfer.effectAllowed = 'move'
-            evt.dataTransfer.setData('system', system.name)
-        },
-        onDrop(evt, targetState) {
-            const system = evt.dataTransfer.getData('system')
-            const item = this.ruleSystems.find(s => s.name == system);
-            item.state = targetState.value;
+        toggleRuleSystemState(system) {
+            system.state = system.state + 1;
+            if (system.state > 1) {
+                system.state = -1
+            }
         },
     }
 };
