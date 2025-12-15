@@ -4,8 +4,10 @@ import eden.drivethru.models.RPGProduct
 import eden.drivethru.models.RankedProductGroup
 import eden.drivethru.models.Ranking
 import eden.drivethru.models.RuleSystem
+import eden.drivethru.models.ViewModel
 import kotlinx.serialization.json.Json
 import java.nio.file.Path
+import java.time.LocalDate
 import kotlin.io.path.writeText
 
 class BestsellersTask(
@@ -19,12 +21,17 @@ class BestsellersTask(
         val groupedProducts = ranks.map {
             RankedProductGroup(it, getProductsForRanking(it, systems).toSet().toList())
         }
-        outputToJson(groupedProducts)
+        outputToJson(
+            ViewModel(
+                lastUpdated = LocalDate.now().toString(),
+                groups = groupedProducts
+            )
+        )
         imageService.downloadImages(groupedProducts)
     }
 
-    private fun outputToJson(groups: List<RankedProductGroup>) {
-        val json = encoder.encodeToString(groups)
+    private fun outputToJson(model: ViewModel) {
+        val json = encoder.encodeToString(model)
         outputPath.writeText("const data = $json")
     }
 

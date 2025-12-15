@@ -16,8 +16,25 @@
 </head>
 <body>
 <div id="app">
-    <div class="controls">
-        <fieldset>
+    <div class="page-title">DriveThruRPG Bestselling OSR adventures</div>
+    <div class="page-author">by <a href="/">Martin Eden</a></div>
+    <div class="timestamp">Last updated {{ lastUpdated }}</div>
+    <Transition>
+    <div class="explanation" v-if="showExplanation">
+        This page lists all products on DriveThruRPG that fulfill these three criteria:
+        <ul>
+            <li>Belong to the  "Campaigns, Adventures & Modules" category (a subcategory of "Supplements & Expansions")</li>
+            <li>Compatible with either "OSR" or with the classic editions of D&D (2E and earlier).</li>
+            <li>Have the Platinum, Mithral, or Adamantine bestseller badge.</li>
+        </ul>
+        Within each rank they are in no particular order.
+        <span class="control-word" @click="toggleExplanation">Hide explanation</span>
+    </div>
+    </Transition>
+
+    <Transition>
+    <div class="controls" v-if="showControls">
+        <fieldset style="padding: 10px;">
             <input id="eras-osr" type="checkbox" v-model="eras" value="OSR"/>
             <label for="eras-osr">OSR</label>
             <input id="eras-classic" type="checkbox" v-model="eras" value="Classic"/>
@@ -39,8 +56,13 @@
             </div>
         </fieldset>
     </div>
+    </Transition>
 
-    <div>{{ totalProducts }} products (with current filters)</div>
+    <p>
+        {{ totalProducts }} products (with current filters).
+        <span class="control-word" @click="toggleControls">{{ controlsActionWord }} filters</span>
+        <span v-if="!showExplanation" class="control-word" @click="toggleExplanation">What is this page?</span>
+    </p>
 
     <div v-for="group in filteredGroups" class="product-group">
         <div class="rank">{{ group.rank }}</div>

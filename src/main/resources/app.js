@@ -1,11 +1,14 @@
 export const App = {
     data() {
-        const allSystems = [...new Set(data.flatMap(g => g.products.flatMap(p => p.ruleSystems)))];
+        const allSystems = [...new Set(data.groups.flatMap(g => g.products.flatMap(p => p.ruleSystems)))];
 
         return {
-            groups: data,
+            groups: data.groups,
+            lastUpdated: data.lastUpdated,
             eras: ["OSR", "Classic"],
             ruleSystems: allSystems.map(s => ({ name: s, state: 0 })),
+            showControls: false,
+            showExplanation: false,
             tagStates: [
                 { value: -1, name: "Must not be compatible with" },
                 { value: 0, name: "No preference" },
@@ -22,6 +25,13 @@ export const App = {
         },
         totalProducts() {
             return this.filteredGroups.reduce((sum, g) => sum + g.products.length, 0);
+        },
+        controlsActionWord() {
+            if (this.showControls) {
+                return "Hide";
+            } else {
+                return "Show";
+            }
         }
     },
     methods: {
@@ -53,5 +63,11 @@ export const App = {
                 system.state = -1
             }
         },
+        toggleControls() {
+            this.showControls = !this.showControls;
+        },
+        toggleExplanation() {
+            this.showExplanation = !this.showExplanation;
+        }
     }
 };
