@@ -44,3 +44,10 @@ val copyResourcesToOutput by tasks.registering(Copy::class) {
     into(layout.projectDirectory.dir("output"))
 }
 tasks.findByName("run")!!.dependsOn(copyResourcesToOutput)
+
+val clearCacheData by tasks.registering(Delete::class) {
+    val home = project.gradle.gradleUserHomeDir.parent
+    val cache = File(home, ".drivethru/cache")
+    val nonImageFiles = cache.listFiles().filter { "image" !in it.name }
+    delete(nonImageFiles)
+}
