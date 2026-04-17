@@ -8,7 +8,6 @@ export const App = {
             eras: ["OSR", "Classic"],
             ruleSystems: allSystems.map(s => ({ name: s, state: 0 })),
             showControls: false,
-            showExplanation: false,
             tagStates: [
                 { value: -1, name: "Must not be compatible with" },
                 { value: 0, name: "No preference" },
@@ -65,9 +64,6 @@ export const App = {
         },
         toggleControls() {
             this.showControls = !this.showControls;
-        },
-        toggleExplanation() {
-            this.showExplanation = !this.showExplanation;
         }
     }
 };

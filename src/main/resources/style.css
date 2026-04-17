@@ -1,12 +1,18 @@
 @font-face {
   font-family: "Normal";
-  src: url("Alegreya.ttf");
+  src: url("AlteHaasGroteskRegular.ttf");
+}
+
+@font-face {
+  font-family: "Title";
+  src: url("Mont-Heavy.otf");
 }
 
 body {
+    --main-bg-color: rgb(6, 65, 0);
     font-family: Normal;
-    background: url("images/bg.png");
-    padding: 10px;
+    background: white;
+    margin: 0;
 }
 
 a {
@@ -17,14 +23,25 @@ a:visited {
     color: rgb(110, 50, 110);
 }
 
+header {
+    background: url(images/perforated_white_leather.webp) var(--main-bg-color);
+    background-blend-mode: multiply;
+    color: white;
+    padding: 10px;
+    font-family: Secondary, sans-serif;
+    font-weight: bold;
+}
+
 .page-title {
     font-size: 300%;
     text-align: center;
     font-weight: bold;
+    font-family: Title, Arial
 }
 
 .page-author {
     text-align: center;
+    margin-top: 10px;
 }
 .page-author a {
     color: #5593ba;
@@ -34,67 +51,81 @@ a:visited {
     text-align: right;
 }
 
+.summary {
+    padding: 10px;
+}
+
 .explanation {
-    margin-bottom: 30px;
+    padding: 10px;
 }
 
 .product-group {
-    margin: 30px 0;
+    margin: 20px 0;
 }
 .rank {
     font-weight: bold;
     font-size: 24pt;
+    padding: 10px;
+    color: White;
     margin-bottom: 10px;
+    background: var(--main-bg-color);
+}
+.product-contents {
+    padding: 10px;
 }
 .products {
     display: flex;
     flex-wrap: wrap;
 }
 .products .product {
-    width: 200px;
-    height: 315px;
-    margin: 20px 10px;
+    margin: 10px;
     text-align: center;
 }
 
 .products .product .thumbnail {
     width: 100%;
-    height: 260px;
-    overflow: hidden;
-    background: black;
-    box-shadow: 5px 5px 3px rgb(127,127,127);
+    aspect-ratio: 2/3;
+    background: transparent;
 }
 
 .products .product .thumbnail img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 5px 5px 3px rgb(127,127,127);
 }
 
 .products .product .title {
     padding: 10px 5px;
 }
 
-@media (width <= 500px) {
-    body {
-        margin: 0;
-    }
-    .product-group {
-        margin: 30px 10px;
-    }
+@media (max-width: 500px) {
     .products .product {
-        width: 150px;
-        height: 230px;
+        width: calc(50% - 20px);
     }
-    .products .product .thumbnail {
-        height: 180px;
+}
+@media (min-width: 500px) and (max-width: 700px) {
+    .products .product {
+        width: calc(33% - 20px);
+    }
+}
+@media (min-width: 700px) {
+    .products .product {
+        width: calc(25% - 20px);
+    }
+}
+@media (min-width: 900px) {
+    .products .product {
+        width: 200px;
     }
 }
 
 fieldset {
-    margin: 20px 0;
+    margin: 0;
     padding: 5px;
-    background: #5593ba;
+    background: var(--main-bg-color);
     color: white;
-    border: 2px solid white;
+    border: none;
 }
 
 fieldset label {
@@ -107,6 +138,7 @@ fieldset label {
 .tags {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 5px;
 }
 .note {
     font-size: smaller;
@@ -147,11 +179,11 @@ fieldset label {
 .control-word {
     box-sizing: border-box;
     display: inline-block;
-    background-color: #5593ba;
-    color: white;
-    padding: 5px;
+    background-color: White;
+    color: Black;
+    padding: 8px;
     cursor: pointer;
-    border: 2px solid white;
+    border: 2px solid Black;
     white-space: nowrap;
 }
 

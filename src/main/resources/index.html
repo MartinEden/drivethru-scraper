@@ -16,70 +16,74 @@
 </head>
 <body>
 <div id="app">
-    <div class="page-title">DriveThruRPG Bestselling OSR adventures</div>
-    <div class="page-author">by <a href="/">Martin Eden</a></div>
-    <div class="timestamp">Last updated {{ lastUpdated }}</div>
-    <Transition>
-    <div class="explanation" v-if="showExplanation">
-        This page lists all products on DriveThruRPG that fulfill these three criteria:
-        <ul>
-            <li>Belong to the  "Campaigns, Adventures & Modules" category (a subcategory of "Supplements & Expansions")</li>
-            <li>Compatible with either "OSR" or with the classic editions of D&D (2E and earlier).</li>
-            <li>Have the Platinum, Mithral, or Adamantine bestseller badge.</li>
-        </ul>
-        Within each rank they are in no particular order.
-        <span class="control-word" @click="toggleExplanation">Hide explanation</span>
-    </div>
-    </Transition>
+    <header>
+        <div class="page-title">DriveThruRPG Bestselling OSR adventures</div>
+        <div class="page-author">Compiled by <a href="/">Martin Eden</a></div>
+        <div class="timestamp">Last updated {{ lastUpdated }}</div>
+    </header>
+    <article>
+        <div class="explanation">
+            This page lists all products on DriveThruRPG that fulfill these three criteria:
+            <ul>
+                <li>Belong to the "Campaigns, Adventures & Modules" category (a subcategory of "Supplements &
+                    Expansions")
+                </li>
+                <li>Compatible with either "OSR" or with the classic editions of D&D (2E and earlier).</li>
+                <li>Have the Platinum, Mithral, or Adamantine bestseller badge.</li>
+            </ul>
+            Within each rank they are in no particular order.
+        </div>
 
-    <Transition>
-    <div class="controls" v-if="showControls">
-        <fieldset style="padding: 10px;">
-            <input id="eras-osr" type="checkbox" v-model="eras" value="OSR"/>
-            <label for="eras-osr">OSR</label>
-            <input id="eras-classic" type="checkbox" v-model="eras" value="Classic"/>
-            <label for="eras-classic"> Classic TSR</label>
-        </fieldset>
-        <fieldset>
-            <div class="note">
-            Click once for an "include" filter, click again for "exclude",
-            and click one more time to remove the filter.
-            </div>
-            <div class="tags">
-                <span v-for="system in ruleSystems" class="tag" @click="toggleRuleSystemState(system)">
-                    <span v-if="system.state == -1" class="tag-negative">✗</span>
-                    <span v-if="system.state == +1" class="tag-positive">✓</span>
-                    <span class="tag-name">
-                        {{ system.name }}
-                    </span>
-                </span>
-            </div>
-        </fieldset>
-    </div>
-    </Transition>
-
-    <p>
-        {{ totalProducts }} products (with current filters).
-        <span class="control-word" @click="toggleControls">{{ controlsActionWord }} filters</span>
-        <span v-if="!showExplanation" class="control-word" @click="toggleExplanation">What is this page?</span>
-    </p>
-
-    <div v-for="group in filteredGroups" class="product-group">
-        <div class="rank">{{ group.rank }}</div>
-        <div>{{ totalForRank(group.rank) }} products (with current filters)</div>
-        <div class="products">
-            <div v-for="product in group.products" class="product">
-                <a :href="toProductUrl(product)">
-                    <div class="thumbnail">
-                        <img :src="toImageUrl(product)"/>
+        <Transition>
+            <div class="controls">
+                <fieldset style="padding: 10px;">
+                    <input id="eras-osr" type="checkbox" v-model="eras" value="OSR"/>
+                    <label for="eras-osr">OSR</label>
+                    <input id="eras-classic" type="checkbox" v-model="eras" value="Classic"/>
+                    <label for="eras-classic"> Classic TSR</label>
+                    <span class="control-word" @click="toggleControls">{{ controlsActionWord }} system filters</span>
+                </fieldset>
+                <fieldset v-if="showControls">
+                    <div class="note">
+                        Click once for an "include" filter, click again for "exclude",
+                        and click one more time to remove the filter.
                     </div>
-                    <div class="title">
-                        {{ product.name }}
+                    <div class="tags">
+                        <span v-for="system in ruleSystems" class="tag" @click="toggleRuleSystemState(system)">
+                            <span v-if="system.state == -1" class="tag-negative">✗</span>
+                            <span v-if="system.state == +1" class="tag-positive">✓</span>
+                            <span class="tag-name">
+                                {{ system.name }}
+                            </span>
+                        </span>
                     </div>
-                </a>
+                </fieldset>
+            </div>
+        </Transition>
+
+        <div class="summary">
+            {{ totalProducts }} products (with current filters).
+        </div>
+
+        <div v-for="group in filteredGroups" class="product-group">
+            <div class="rank">{{ group.rank }}</div>
+            <div class="product-contents">
+                <div>{{ totalForRank(group.rank) }} products (with current filters)</div>
+                <div class="products">
+                    <div v-for="product in group.products" class="product">
+                        <a :href="toProductUrl(product)">
+                            <div class="thumbnail">
+                                <img :src="toImageUrl(product)"/>
+                            </div>
+                            <div class="title">
+                                {{ product.name }}
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </article>
 </div>
 <script type="module">
     import { createApp } from 'vue'
