@@ -12,8 +12,4 @@ class JsonOutput(private val outputPath: Path) : ProductOutput {
         val json = encoder.encodeToString(data)
         outputPath.writeText("const data = $json")
     }
-
-    companion object {
-        fun to(outputPath: Path) = JsonOutput(outputPath)
-    }
 }

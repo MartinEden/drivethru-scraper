@@ -16,7 +16,11 @@ fun main() {
     val service = ProductService(fetcher)
     val imageService = ImageService(fetcher, outputDirectory)
 
-    val output = JsonOutput.to(outputDirectory.resolve("bestsellers.js"))
+    val output = MultiTargetOutput(
+        JsonOutput(
+            outputDirectory.resolve("bestsellers.js")
+        )
+    )
     val task = BestsellersTask(service, imageService, output)
 
     task.run(
