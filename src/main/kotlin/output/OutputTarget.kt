@@ -1,7 +1,7 @@
-package eden.drivethru
+package eden.drivethru.output
 
 import eden.drivethru.models.ViewModel
 
-interface ProductOutput {
+interface ProductOutputTarget {
     fun write(data: ViewModel)
 }
