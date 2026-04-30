@@ -5,7 +5,7 @@ import kotlinx.serialization.json.Json
 import java.nio.file.Path
 import kotlin.io.path.writeText
 
-class JsonOutputTarget(private val outputPath: Path) : ProductOutputTarget {
+class JsonOutputTarget(private val outputPath: Path) : OutputTarget {
     private val encoder = Json { prettyPrint = true }
 
     override fun write(data: ViewModel) {

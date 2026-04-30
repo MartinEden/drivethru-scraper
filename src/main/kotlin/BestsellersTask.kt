@@ -1,13 +1,13 @@
 package eden.drivethru
 
 import eden.drivethru.models.*
-import eden.drivethru.output.ProductOutputTarget
+import eden.drivethru.output.OutputTarget
 import java.time.LocalDate
 
 class BestsellersTask(
     private val service: ProductService,
     private val imageService: ImageService,
-    private val output: ProductOutputTarget
+    private val output: OutputTarget
 ) {
     fun run(ranks: Iterable<Ranking>, systems: Iterable<RuleSystem>) {
         val groupedProducts = ranks.map {

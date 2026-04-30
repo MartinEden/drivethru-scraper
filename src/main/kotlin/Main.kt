@@ -4,6 +4,7 @@ import eden.drivethru.models.Ranking
 import eden.drivethru.models.RuleSystem
 import eden.drivethru.output.JsonOutputTarget
 import eden.drivethru.output.MultiTargetOutput
+import eden.drivethru.output.PlainTextOutputTarget
 import io.ktor.client.*
 import java.nio.file.Path
 import java.nio.file.Paths
@@ -21,6 +22,9 @@ fun main() {
     val output = MultiTargetOutput(
         JsonOutputTarget(
             outputDirectory.resolve("bestsellers.js")
+        ),
+        PlainTextOutputTarget(
+            Path.of("bestsellers.txt")
         )
     )
     val task = BestsellersTask(service, imageService, output)
