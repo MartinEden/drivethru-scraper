@@ -16,8 +16,8 @@ fun main() {
     val service = ProductService(fetcher)
     val imageService = ImageService(fetcher, outputDirectory)
 
-    val outputPath = outputDirectory.resolve("bestsellers.js")
-    val task = BestsellersTask(service, imageService, outputPath)
+    val output = JsonOutput.to(outputDirectory.resolve("bestsellers.js"))
+    val task = BestsellersTask(service, imageService, output)
 
     task.run(
         ranks = listOf(Ranking.Adamantine, Ranking.Mithral, Ranking.Platinum),
