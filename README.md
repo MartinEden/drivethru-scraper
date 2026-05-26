@@ -1,5 +1,5 @@
 # DriveThruRPG OSR module scraper
-DriveThruRPG is mostly built around seeing what's currently "hot", which makes sense and is good news if you have just published something and want it to get seen! But sometimes I just want to see:
+[DriveThruRPG](https://www.drivethrurpg.com) is mostly built around seeing what's currently "hot", which makes sense and is good news if you have just published something and want it to get seen! But sometimes I just want to see:
 
 What are the absolute best old school modules (at least as far as sales data can tell you)?
 
