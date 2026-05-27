@@ -20,6 +20,7 @@
 - T1 The Village of Hommlet (1e)
 - T1-4 Temple of Elemental Evil (1e)
 - U1 The Sinister Secret of Saltmarsh (1e)
+- Night Below: An Underdark Campaign (2e)
 
 # Mithral
 - Barrowmaze Complete
@@ -70,6 +71,7 @@
 - Die Vecna Die! (2e)
 - Planes of Conflict (2e)
 - WGA4 Vecna Lives! (2e)
+- Deep Carbon Observatory
 
 # Platinum
 - A Single, Small Cut
@@ -238,4 +240,10 @@
 - WGR1 Greyhawk Ruins (2e)
 - WGR2 Treasures of Greyhawk (2e)
 - When Black Roses Bloom (2e)
+- A0 The Rising Knight -- Adventures for 5th Edition Rules
+- Castle Gargantua
+- Dark Sun Campaign Setting (Expanded and Revised Edition) (2e)
+- Deep Carbon Observatory - Remastered
+- SJR8 Space Lairs (2e)
+- T2000 v1 Kidnapped
 
