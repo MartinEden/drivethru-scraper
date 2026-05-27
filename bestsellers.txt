@@ -1,10 +1,11 @@
-2026-04-17
+2026-05-27
 
 # Adamantine
 - Beyond the Wall and Other Adventures
 - The Gardens Of Ynn
 - The Stygian Library
 - The Waking of Willowby Hall
+- Winter's Daughter
 - B1 In Search of the Unknown (Basic)
 - B10 Night's Dark Terror (Basic)
 - B2 The Keep on the Borderlands (Basic)
@@ -38,7 +39,6 @@
 - The Weird That Befell Drigbolton
 - Tomb Robbers of the Crystal Frontier
 - Tower of the Stargazer
-- Winter's Daughter
 - Wyvern Songs
 - B1-9 In Search of Adventure (Basic)
 - B11 King's Festival (Basic)
@@ -51,10 +51,12 @@
 - B9 Castle Caldwell and Beyond (Basic)
 - X1 The Isle of Dread (Basic)
 - X2 Castle Amber (Basic)
+- X5 Temple of Death (Basic)
 - C1 The Hidden Shrine of Tamoachan (1e)
 - C2 The Ghost Tower of Inverness (1e)
 - DL1 Dragons of Despair (1e)
 - I10: Ravenloft II: The House on Gryphon Hill (1e)
+- I2 Tomb of the Lizard King (1e)
 - L1 The Secret of Bone Hill (1e)
 - L3 Deep Dwarven Delve (1e)
 - N4 Treasure Hunt (1e)
@@ -72,6 +74,7 @@
 # Platinum
 - A Single, Small Cut
 - Adventure Anthology for Shadowdark
+- Barrowmaze Complete 10th Anniversary (Monochrome Cover)
 - Beyond the Wall - A Kingless Realm
 - Black Pudding Heavy Helping Vol. One
 - Blackmarsh
@@ -84,7 +87,6 @@
 - Darkness at Nekemte
 - Demon Driven to the Maw
 - Dortoka: City on the Sea of Glass
-- Dungeon Crawl Classics #35: Gazetteer of the Known Realms
 - Dungeon Crawl Classics #66.5: Doom of the Savage King
 - Dungeon Crawl Classics #68: People of the Pit
 - Dungeon Crawl Classics #79: Frozen in Time
@@ -114,12 +116,11 @@
 - Old-School Essentials Adventure Anthology 2
 - Ominous Crypt of the Blood Moss
 - Operation Unfathomable
-- OSR Solo
 - Pestilence at Halith Vorn
 - Planar Compass Issue 1
 - Prison of the Hated Pretender
 - Qelong
-- Ruins of the Undercity
+- Ruins of the Undercity: Classic Edition
 - Scenic Dunnsmouth
 - Sinister Stone of Sakkara
 - Skrym: Wilderness Sites, Encounters, & Loot
@@ -142,6 +143,7 @@
 - Thulian Echoes
 - What Ho, Frog Demons
 - White Box Omnibus [Swords & Wizardry]
+- World of the Lost
 - BSOLO Ghost of Lion Castle (Basic)
 - CM1 Test of the Warlords (Basic)
 - CM3 Sabre River (Basic)
@@ -158,7 +160,6 @@
 - X11 Saga of the Shadow Lord (Basic)
 - X12 Skarda's Mirror (Basic)
 - X4 Master of the Desert Nomads (Basic)
-- X5 Temple of Death (Basic)
 - X6 Quagmire! (Basic)
 - X7 The War Rafts of Kron (Basic)
 - X8: Drums on Fire Mountain (Basic)
@@ -180,13 +181,13 @@
 - EX2 The Land Beyond the Magic Mirror (1e)
 - FR6 Dreams of the Red Wizards (1e)
 - FRC1 Ruins of Adventure (1e)
+- GDQ 1-7 Queen of the Spiders
 - Greyhawk Adventures (1e/2e)
 - H1 Bloodstone Pass (1e)
 - H2 The Mines of Bloodstone (1e)
 - H4 The Throne of Bloodstone (1e)
 - I1 Dwellers of the Forbidden City (1e)
 - I12 Egg of the Phoenix (1e)
-- I2 Tomb of the Lizard King (1e)
 - I3 Pharoah (1e)
 - I3-5 Desert of Desolation (1e)
 - I4 Oasis of the White Palm (1e)
@@ -210,9 +211,11 @@
 - WG7 Castle Greyhawk (1e)
 - A Paladin in Hell (2e)
 - Against the Giants: The Liberation of Geoff (2e)
+- Castles Forlorn (2e)
 - Dead Gods (2e)
 - DLC2: Dragonlance Classics Volume II (2e)
 - DLC3: Dragonlance Classics Volume III (2e)
+- Doors to the Unknown (2e)
 - Dragonlance Classics Volume I (2e)
 - DS1 Freedom (2e)
 - Hellbound - The Blood War (2e)
