@@ -1,4 +1,4 @@
-2026-05-27
+2026-05-28
 
 # Adamantine
 - Beyond the Wall and Other Adventures
@@ -6,25 +6,26 @@
 - The Stygian Library
 - The Waking of Willowby Hall
 - Winter's Daughter
+- A0-A4: Against the Slave Lords (1e)
 - B1 In Search of the Unknown (Basic)
 - B10 Night's Dark Terror (Basic)
 - B2 The Keep on the Borderlands (Basic)
 - B4 The Lost City (Basic)
-- A0-A4: Against the Slave Lords (1e)
 - D1-2 Descent into the Depths of the Earth (1e)
 - D3 Vault of the Drow (1e)
 - G1-3 Against the Giants (1e)
 - I6 Ravenloft (1e)
 - N1 Against the Cult of the Reptile God (1e)
+- Night Below: An Underdark Campaign (2e)
 - Q1 Queen of the Demonweb Pits (1e)
 - T1 The Village of Hommlet (1e)
 - T1-4 Temple of Elemental Evil (1e)
 - U1 The Sinister Secret of Saltmarsh (1e)
-- Night Below: An Underdark Campaign (2e)
 
 # Mithral
 - Barrowmaze Complete
 - Death Frost Doom
+- Deep Carbon Observatory
 - Dungeon Crawl Classics #67: Sailors on the Starless Sea
 - Falkrest Abbey
 - Fever-Dreaming Marlinko
@@ -41,6 +42,7 @@
 - Tomb Robbers of the Crystal Frontier
 - Tower of the Stargazer
 - Wyvern Songs
+- Al-Qadim: Arabian Adventures (2e)
 - B1-9 In Search of Adventure (Basic)
 - B11 King's Festival (Basic)
 - B12 Queen's Harvest (Basic)
@@ -50,31 +52,30 @@
 - B7 Rahasia (Basic)
 - B8 Journey to the Rock (Basic)
 - B9 Castle Caldwell and Beyond (Basic)
-- X1 The Isle of Dread (Basic)
-- X2 Castle Amber (Basic)
-- X5 Temple of Death (Basic)
 - C1 The Hidden Shrine of Tamoachan (1e)
 - C2 The Ghost Tower of Inverness (1e)
 - DL1 Dragons of Despair (1e)
+- Die Vecna Die! (2e)
 - I10: Ravenloft II: The House on Gryphon Hill (1e)
 - I2 Tomb of the Lizard King (1e)
 - L1 The Secret of Bone Hill (1e)
 - L3 Deep Dwarven Delve (1e)
 - N4 Treasure Hunt (1e)
+- Planes of Conflict (2e)
 - S1 Tomb of Horrors (1e)
 - S1-4: Dungeons of Dread (1e)
 - S2 White Plume Mountain (1e)
 - S4: The Lost Caverns of Tsojcanth (1e)
 - U2 Danger at Dunwater (1e)
 - U3 The Final Enemy (1e)
-- Al-Qadim: Arabian Adventures (2e)
-- Die Vecna Die! (2e)
-- Planes of Conflict (2e)
 - WGA4 Vecna Lives! (2e)
-- Deep Carbon Observatory
+- X1 The Isle of Dread (Basic)
+- X2 Castle Amber (Basic)
+- X5 Temple of Death (Basic)
 
 # Platinum
 - A Single, Small Cut
+- A0 The Rising Knight -- Adventures for 5th Edition Rules
 - Adventure Anthology for Shadowdark
 - Barrowmaze Complete 10th Anniversary (Monochrome Cover)
 - Beyond the Wall - A Kingless Realm
@@ -82,11 +83,13 @@
 - Blackmarsh
 - Broodmother SkyFortress
 - Cairn (1st Edition)
+- Castle Gargantua
 - Castle Xyntillan
 - Castles & Crusades Bluffside City on the Edge
 - Completely Unfathomable (DCC)
 - Completely Unfathomable (Swords & Wizardry Edition)
 - Darkness at Nekemte
+- Deep Carbon Observatory - Remastered
 - Demon Driven to the Maw
 - Dortoka: City on the Sea of Glass
 - Dungeon Crawl Classics #66.5: Doom of the Savage King
@@ -106,10 +109,10 @@
 - In the Shadow of Tower Silveraxe
 - Isle of the Unknown
 - Kazad Mor: The Cursed Dwarfhome - compatible with Shadowdark RPG
-- Lamentations of the Gingerbread Princess
-- Letters from the Dark Vol. IV: Borderlands
 - LLA001: Blood Moon Rising
 - LLA002: The Inn of Lost Heroes
+- Lamentations of the Gingerbread Princess
+- Letters from the Dark Vol. IV: Borderlands
 - Mad Monks of Kwantoom
 - Misty Isles of the Eld
 - Nebin Pendlebrook's Perilous Pantry (DCC)
@@ -129,6 +132,7 @@
 - Stay Frosty
 - Summer's End and Other One-Page Adventures
 - Sunken City Omnibus (DCC RPG)
+- T2000 v1 Kidnapped
 - Tales of the Scarecrow
 - Tales of the Wolfguard
 - Ten Buried Blades: An Adventure for Godbound
@@ -146,18 +150,91 @@
 - What Ho, Frog Demons
 - White Box Omnibus [Swords & Wizardry]
 - World of the Lost
+- A Paladin in Hell (2e)
+- Against the Giants: The Liberation of Geoff (2e)
 - BSOLO Ghost of Lion Castle (Basic)
+- C3 The Lost Island of Castanamir (1e)
+- C4 To Find a King (1e)
+- C5 The Bane of Llewellyn (1e)
 - CM1 Test of the Warlords (Basic)
 - CM3 Sabre River (Basic)
 - CM8 The Endless Stair (Basic)
 - CM9 Legacy of Blood (Basic)
+- Castles Forlorn (2e)
 - DA1 Adventures in Blackmoor (Basic)
 - DA2 The Temple of the Frog (Basic)
 - DA3 City of the Gods (Basic)
 - DA4 The Duchy of Ten (Basic)
+- DL14 Dragons of Triumph (1e)
+- DL15 Mists of Krynn (1e)
+- DL2 Dragons of Flame (1e)
+- DL3 Dragons of Hope (1e)
+- DL4 Dragons of Desolation (1e)
+- DL6 Dragons of Ice (1e)
+- DL8 Dragons of War (1e)
+- DLC2: Dragonlance Classics Volume II (2e)
+- DLC3: Dragonlance Classics Volume III (2e)
+- DS1 Freedom (2e)
+- Dark Sun Campaign Setting (Expanded and Revised Edition) (2e)
+- Dead Gods (2e)
+- Doors to the Unknown (2e)
+- Dragonlance Classics Volume I (2e)
+- EX1 Dungeonland (1e)
+- EX2 The Land Beyond the Magic Mirror (1e)
+- FR6 Dreams of the Red Wizards (1e)
+- FRC1 Ruins of Adventure (1e)
+- GDQ 1-7 Queen of the Spiders
+- Greyhawk Adventures (1e/2e)
+- H1 Bloodstone Pass (1e)
+- H2 The Mines of Bloodstone (1e)
+- H4 The Throne of Bloodstone (1e)
+- Hellbound - The Blood War (2e)
 - Hollow World Campaign Setting (Basic)
+- I1 Dwellers of the Forbidden City (1e)
+- I12 Egg of the Phoenix (1e)
+- I3 Pharoah (1e)
+- I3-5 Desert of Desolation (1e)
+- I4 Oasis of the White Palm (1e)
+- I5 Lost Tomb of Martek (1e)
+- I7 Baltron's Beacon (1e)
+- I9 Day of Al'Akbar (1e)
+- L2 The Assassin's Knot (1e)
 - M1 Blizzard Pass (Basic)
 - M2/MSOLO2 Maze of the Riddling Minotaur (Basic)
+- N2 The Forest Oracle (1e)
+- N3 Destiny of Kings (1e) (1986)
+- N5 Under Illefarn (1e)
+- RM4 House of Strahd (2e)
+- RQ1 Night of the Walking Dead (2e)
+- Return to White Plume Mountain (2e)
+- Return to the Tomb of Horrors (2e)
+- Ruins of Undermountain II: The Deep Levels (2e)
+- S3 Expedition to the Barrier Peaks (1e)
+- S5 The Dancing Hut of Baba Yaga (2e)
+- SJA1 Wildspace (2e)
+- SJA2 Skull & Crossbows (2e)
+- SJR1 Lost Ships (2e)
+- SJR8 Space Lairs (2e)
+- Tales from the Infinite Staircase (2e)
+- The Eternal Boundary (2e)
+- The Gates of Firestorm Peak (2e)
+- The Rod of Seven Parts (2e)
+- The Ruins of Myth Drannor (2e)
+- UK1 Beyond the Crystal Cave (1e)
+- UK2 The Sentinel (1e)
+- UK3 The Gauntlet (1e)
+- UK4 When a Star Falls (1e)
+- UK5 Eye of the Serpent (1e)
+- UK6 All That Glitters... (1e)
+- UK7 Dark Clouds Gather (1e)
+- Vecna Reborn (2e)
+- WG4 The Forgotten Temple of Tharizdun (1e)
+- WG5: Mordenkainen's Fantastic Adventure (1e)
+- WG7 Castle Greyhawk (1e)
+- WGR1 Greyhawk Ruins (2e)
+- WGR2 Treasures of Greyhawk (2e)
+- Well of Worlds [Planescape] (2e)
+- When Black Roses Bloom (2e)
 - X10 Red Arrow, Black Shield (Basic)
 - X11 Saga of the Shadow Lord (Basic)
 - X12 Skarda's Mirror (Basic)
@@ -169,81 +246,4 @@
 - XL1 Quest for the Heartstone (Expert)
 - XS2 Thunderdelve Mountain (Basic)
 - XSOLO Lathan's Gold (Basic)
-- C3 The Lost Island of Castanamir (1e)
-- C4 To Find a King (1e)
-- C5 The Bane of Llewellyn (1e)
-- DL14 Dragons of Triumph (1e)
-- DL15 Mists of Krynn (1e)
-- DL2 Dragons of Flame (1e)
-- DL3 Dragons of Hope (1e)
-- DL4 Dragons of Desolation (1e)
-- DL6 Dragons of Ice (1e)
-- DL8 Dragons of War (1e)
-- EX1 Dungeonland (1e)
-- EX2 The Land Beyond the Magic Mirror (1e)
-- FR6 Dreams of the Red Wizards (1e)
-- FRC1 Ruins of Adventure (1e)
-- GDQ 1-7 Queen of the Spiders
-- Greyhawk Adventures (1e/2e)
-- H1 Bloodstone Pass (1e)
-- H2 The Mines of Bloodstone (1e)
-- H4 The Throne of Bloodstone (1e)
-- I1 Dwellers of the Forbidden City (1e)
-- I12 Egg of the Phoenix (1e)
-- I3 Pharoah (1e)
-- I3-5 Desert of Desolation (1e)
-- I4 Oasis of the White Palm (1e)
-- I5 Lost Tomb of Martek (1e)
-- I7 Baltron's Beacon (1e)
-- I9 Day of Al'Akbar (1e)
-- L2 The Assassin's Knot (1e)
-- N2 The Forest Oracle (1e)
-- N3 Destiny of Kings (1e) (1986)
-- N5 Under Illefarn (1e)
-- S3 Expedition to the Barrier Peaks (1e)
-- UK1 Beyond the Crystal Cave (1e)
-- UK2 The Sentinel (1e)
-- UK3 The Gauntlet (1e)
-- UK4 When a Star Falls (1e)
-- UK5 Eye of the Serpent (1e)
-- UK6 All That Glitters... (1e)
-- UK7 Dark Clouds Gather (1e)
-- WG4 The Forgotten Temple of Tharizdun (1e)
-- WG5: Mordenkainen's Fantastic Adventure (1e)
-- WG7 Castle Greyhawk (1e)
-- A Paladin in Hell (2e)
-- Against the Giants: The Liberation of Geoff (2e)
-- Castles Forlorn (2e)
-- Dead Gods (2e)
-- DLC2: Dragonlance Classics Volume II (2e)
-- DLC3: Dragonlance Classics Volume III (2e)
-- Doors to the Unknown (2e)
-- Dragonlance Classics Volume I (2e)
-- DS1 Freedom (2e)
-- Hellbound - The Blood War (2e)
-- Return to the Tomb of Horrors (2e)
-- Return to White Plume Mountain (2e)
-- RM4 House of Strahd (2e)
-- RQ1 Night of the Walking Dead (2e)
-- Ruins of Undermountain II: The Deep Levels (2e)
-- S5 The Dancing Hut of Baba Yaga (2e)
-- SJA1 Wildspace (2e)
-- SJA2 Skull & Crossbows (2e)
-- SJR1 Lost Ships (2e)
-- Tales from the Infinite Staircase (2e)
-- The Eternal Boundary (2e)
-- The Gates of Firestorm Peak (2e)
-- The Rod of Seven Parts (2e)
-- The Ruins of Myth Drannor (2e)
-- Vecna Reborn (2e)
-- Well of Worlds [Planescape] (2e)
-- WGR1 Greyhawk Ruins (2e)
-- WGR2 Treasures of Greyhawk (2e)
-- When Black Roses Bloom (2e)
-- A0 The Rising Knight -- Adventures for 5th Edition Rules
-- Castle Gargantua
-- Dark Sun Campaign Setting (Expanded and Revised Edition) (2e)
-- Deep Carbon Observatory - Remastered
-- SJR8 Space Lairs (2e)
-- T2000 v1 Kidnapped
 

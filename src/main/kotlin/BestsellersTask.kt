@@ -10,8 +10,12 @@ class BestsellersTask(
     private val output: OutputTarget
 ) {
     fun run(ranks: Iterable<Ranking>, systems: Iterable<RuleSystem>) {
-        val groupedProducts = ranks.map {
-            RankedProductGroup(it, getProductsForRanking(it, systems).toSet().toList())
+        val groupedProducts = ranks.map { rank ->
+            val products = getProductsForRanking(rank, systems)
+                .toSet()        // Remove duplicates
+                .sortedWith(compareBy({ it.era }, { it.name }))
+                .toList()
+            RankedProductGroup(rank, products)
         }
         output.write(
             ViewModel(

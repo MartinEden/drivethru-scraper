@@ -27,6 +27,3 @@ data class RPGProduct(
         }
     }
 }
-
-fun Map<Ranking, Sequence<RPGProduct>>.reify() =
-    this.entries.associate { (ranking, collection) -> ranking to collection.toList() }
