@@ -1,4 +1,4 @@
-2026-05-28
+2026-07-01
 
 # Adamantine
 - Beyond the Wall and Other Adventures
@@ -21,6 +21,7 @@
 - T1 The Village of Hommlet (1e)
 - T1-4 Temple of Elemental Evil (1e)
 - U1 The Sinister Secret of Saltmarsh (1e)
+- X1 The Isle of Dread (Basic)
 
 # Mithral
 - Barrowmaze Complete
@@ -69,13 +70,13 @@
 - U2 Danger at Dunwater (1e)
 - U3 The Final Enemy (1e)
 - WGA4 Vecna Lives! (2e)
-- X1 The Isle of Dread (Basic)
 - X2 Castle Amber (Basic)
 - X5 Temple of Death (Basic)
 
 # Platinum
 - A Single, Small Cut
 - A0 The Rising Knight -- Adventures for 5th Edition Rules
+- Aberrant Reflections
 - Adventure Anthology for Shadowdark
 - Barrowmaze Complete 10th Anniversary (Monochrome Cover)
 - Beyond the Wall - A Kingless Realm
@@ -129,6 +130,7 @@
 - Scenic Dunnsmouth
 - Sinister Stone of Sakkara
 - Skrym: Wilderness Sites, Encounters, & Loot
+- Solo Tools Expanded, Designed for use with Shadowdark
 - Stay Frosty
 - Summer's End and Other One-Page Adventures
 - Sunken City Omnibus (DCC RPG)
@@ -151,6 +153,7 @@
 - White Box Omnibus [Swords & Wizardry]
 - World of the Lost
 - A Paladin in Hell (2e)
+- A1 Slave Pits of the Undercity (1e)
 - Against the Giants: The Liberation of Geoff (2e)
 - BSOLO Ghost of Lion Castle (Basic)
 - C3 The Lost Island of Castanamir (1e)
@@ -161,10 +164,12 @@
 - CM8 The Endless Stair (Basic)
 - CM9 Legacy of Blood (Basic)
 - Castles Forlorn (2e)
+- Crypt of Lyzandred the Mad (2e)
 - DA1 Adventures in Blackmoor (Basic)
 - DA2 The Temple of the Frog (Basic)
 - DA3 City of the Gods (Basic)
 - DA4 The Duchy of Ten (Basic)
+- DL13 Dragons of Truth (1e)
 - DL14 Dragons of Triumph (1e)
 - DL15 Mists of Krynn (1e)
 - DL2 Dragons of Flame (1e)
