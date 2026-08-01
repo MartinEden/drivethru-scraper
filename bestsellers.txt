@@ -1,4 +1,4 @@
-2026-07-01
+2026-08-01
 
 # Adamantine
 - Beyond the Wall and Other Adventures
@@ -57,6 +57,7 @@
 - C2 The Ghost Tower of Inverness (1e)
 - DL1 Dragons of Despair (1e)
 - Die Vecna Die! (2e)
+- I1 Dwellers of the Forbidden City (1e)
 - I10: Ravenloft II: The House on Gryphon Hill (1e)
 - I2 Tomb of the Lizard King (1e)
 - L1 The Secret of Bone Hill (1e)
@@ -66,9 +67,11 @@
 - S1 Tomb of Horrors (1e)
 - S1-4: Dungeons of Dread (1e)
 - S2 White Plume Mountain (1e)
+- S3 Expedition to the Barrier Peaks (1e)
 - S4: The Lost Caverns of Tsojcanth (1e)
 - U2 Danger at Dunwater (1e)
 - U3 The Final Enemy (1e)
+- Vecna Reborn (2e)
 - WGA4 Vecna Lives! (2e)
 - X2 Castle Amber (Basic)
 - X5 Temple of Death (Basic)
@@ -89,6 +92,7 @@
 - Castles & Crusades Bluffside City on the Edge
 - Completely Unfathomable (DCC)
 - Completely Unfathomable (Swords & Wizardry Edition)
+- Dark Albion: Cults of Chaos
 - Darkness at Nekemte
 - Deep Carbon Observatory - Remastered
 - Demon Driven to the Maw
@@ -142,6 +146,7 @@
 - The God that Crawls
 - The Halls of Arden Vul Complete
 - The Haunted Hamlet - and other hexes
+- The House under the Moondial
 - The Isle of the Plangent Mage
 - The Magnificent Joop van Ooms
 - The Monolith from beyond Space and Time
@@ -188,6 +193,7 @@
 - EX2 The Land Beyond the Magic Mirror (1e)
 - FR6 Dreams of the Red Wizards (1e)
 - FRC1 Ruins of Adventure (1e)
+- FRM1: The Jungles of Chult (2e)
 - GDQ 1-7 Queen of the Spiders
 - Greyhawk Adventures (1e/2e)
 - H1 Bloodstone Pass (1e)
@@ -195,7 +201,6 @@
 - H4 The Throne of Bloodstone (1e)
 - Hellbound - The Blood War (2e)
 - Hollow World Campaign Setting (Basic)
-- I1 Dwellers of the Forbidden City (1e)
 - I12 Egg of the Phoenix (1e)
 - I3 Pharoah (1e)
 - I3-5 Desert of Desolation (1e)
@@ -214,7 +219,6 @@
 - Return to White Plume Mountain (2e)
 - Return to the Tomb of Horrors (2e)
 - Ruins of Undermountain II: The Deep Levels (2e)
-- S3 Expedition to the Barrier Peaks (1e)
 - S5 The Dancing Hut of Baba Yaga (2e)
 - SJA1 Wildspace (2e)
 - SJA2 Skull & Crossbows (2e)
@@ -232,7 +236,6 @@
 - UK5 Eye of the Serpent (1e)
 - UK6 All That Glitters... (1e)
 - UK7 Dark Clouds Gather (1e)
-- Vecna Reborn (2e)
 - WG4 The Forgotten Temple of Tharizdun (1e)
 - WG5: Mordenkainen's Fantastic Adventure (1e)
 - WG7 Castle Greyhawk (1e)
