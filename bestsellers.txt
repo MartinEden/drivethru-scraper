@@ -1,4 +1,4 @@
-2026-08-01
+2026-09-02
 
 # Adamantine
 - Beyond the Wall and Other Adventures
@@ -10,6 +10,7 @@
 - B1 In Search of the Unknown (Basic)
 - B10 Night's Dark Terror (Basic)
 - B2 The Keep on the Borderlands (Basic)
+- B3 Palace of the Silver Princess (Basic)
 - B4 The Lost City (Basic)
 - D1-2 Descent into the Depths of the Earth (1e)
 - D3 Vault of the Drow (1e)
@@ -47,7 +48,6 @@
 - B1-9 In Search of Adventure (Basic)
 - B11 King's Festival (Basic)
 - B12 Queen's Harvest (Basic)
-- B3 Palace of the Silver Princess (Basic)
 - B5 Horror on the Hill (Basic)
 - B6 The Veiled Society (Basic)
 - B7 Rahasia (Basic)
@@ -154,6 +154,9 @@
 - The Storms of Yizhao: An Adventure for Godbound
 - The Wizardarium of Calabraxis
 - Thulian Echoes
+- Torque Borg | Corpse Road to the Cranklands
+- Torque Borg | Echo of Steel
+- Torque Borg | Waste of Water
 - What Ho, Frog Demons
 - White Box Omnibus [Swords & Wizardry]
 - World of the Lost

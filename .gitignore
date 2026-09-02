@@ -1,4 +1,5 @@
 .gradle
+/copy-to-website.sh
 /build/
 /output/
 !gradle/wrapper/gradle-wrapper.jar
