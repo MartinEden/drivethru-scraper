@@ -5,6 +5,7 @@ import eden.drivethru.models.Ranking
 import eden.drivethru.models.RuleSystem
 
 const val ADVENTURES_AND_SUPPLEMENTS = "2110"
+const val EXCLUDE = SOME CATEGORY???
 const val API_ENDPOINT = "https://api.drivethrurpg.com/api/vBeta/products"
 
 class ProductService(private val fetcher: CachingFetcher) {
@@ -20,6 +21,7 @@ class ProductService(private val fetcher: CachingFetcher) {
             "page" to page,
             "ranking" to ranking.name.lowercase(),
             "filters.filterId[require]" to "${ruleSystem.id},$ADVENTURES_AND_SUPPLEMENTS",
+            "filters.filterId[exclude]" to EXCLUDE,
         )
         val parameters = (baseQueryParameters + extraParameters)
         val queryString = parameters.entries.sortedBy { it.key }.joinToString("&") { (k, v) -> "$k=$v" }
